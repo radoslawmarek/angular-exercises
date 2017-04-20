@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="node_modules/angular/angular.js"></script>
+        <link rel="stylesheet" type="text/css" href="app.css">
+    </head>
+    <body ng-app="angular-exercises">
+        
+        <div class="container" ng-controller="MainPageController as ctrl">
+            <div class="header">
+                {{ ctrl.title }}
+            </div>
+            <div class="content">
+                {{ctrl.message}}
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+
+        <script src="app/app.js"></script>
+        <script src="app/photos.service.js"></script>
+        <script src="app/main-page.controller.js"></script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+html, body, .container {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+.header {
+    background-color: black;
+    width: 100%;
+    color: white;
+    font-size: 4em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 0.5em;
+    min-height: 1em;
+    text-transform: uppercase;
+}
+
+.footer {
+    background-color: black;
+    width: 100%;
+    color: white;
+    font-size: 4em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5em;
+    min-height: 1em;
+}
+
+.content {
+    flex: 1;
+    overflow: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}

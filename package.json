@@ -1,0 +1,23 @@
+{
+  "name": "angular-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/app.js",
+  "dependencies": {
+    "angular": "^1.6.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radoslawmarek/angular-exercises.git"
+  },
+  "author": "Radoslaw Marek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/radoslawmarek/angular-exercises/issues"
+  },
+  "homepage": "https://github.com/radoslawmarek/angular-exercises#readme"
+}
