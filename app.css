@@ -1,11 +1,16 @@
 html, body, .container {
     height: 100%;
+    width: 100%;
+    display: flex;
+}
+body {
+    margin: 0;
 }
 
 .container {
-    display: flex;
+    justify-content: center;
     flex-flow: column;
-    flex-wrap: nowrap;
+    /*flex-wrap: nowrap;*/
     align-items: stretch;
 }
 
