@@ -46,6 +46,11 @@ body {
 }
 
 
+.album-row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
 
 .album {
     display: flex;
@@ -60,7 +65,7 @@ body {
     border: 1px solid gray;
 }
 
-.album > img {
+img.thumbnail {
     flex-grow: 0;
     margin: 4px;
     height: 150px;
@@ -73,3 +78,55 @@ body {
     margin: 4px 2px 4px 8px;
 }
 
+.album-photos {
+    padding: 4px;
+}
+
+.photo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 18px;
+    border: 1px solid gray;
+}
+
+.photo-title {
+    padding: 4px;
+}
+
+.photo-title > span {
+    font-weight: bolder;
+    margin-right: 1em;
+}
+
+.big-photo-container {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+    background-color: white;
+    top: 2em;
+    bottom: 2em;
+    left: 1em;
+    right: 1em;
+    border: 2px solid gray;
+}
+
+.photo-header {
+    background-color: black;
+    padding: 1em;
+    font-size: 1.5em;
+    color: white;
+    text-transform: uppercase;
+}
+
+.big-photo-title {
+    margin: 16px 8px 16px 8px;
+    font-size: 1.5em;
+}
+
+.big-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}

@@ -14,10 +14,20 @@
             </div>
 
             <div class="content">
-                <div ng-repeat="album in ctrl.albums" class="album" ng-click="ctrl.albumClick(album.albumId)">
-                    <img ng-src="{{album.albumThumbnailUrl}}" />
-                    <div class="album-title">
-                        {{album.albumTitle}}
+                <div ng-repeat="album in ctrl.albums" class="album-row" >
+                    <div class="album" ng-click="ctrl.albumClick(album.albumId)">
+                        <img class="thumbnail" ng-src="{{album.albumThumbnailUrl}}" />
+                        <div class="album-title">
+                            {{album.albumTitle}}
+                        </div>
+                    </div>
+                    <div ng-if="ctrl.selectedAlbum === album.albumId"  class="album-photos">
+                        <div class="photo" ng-repeat="photo in ctrl.photos">
+                            <display-photo photo="photo"></display-photo>
+                            <div class="photo-title">
+                                <span>Title:</span>{{photo.title}}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -28,6 +38,7 @@
         </div>
 
         <script src="app/app.js"></script>
+        <script src="app/photo.directive.js"></script>
         <script src="app/photos.service.js"></script>
         <script src="app/main-page.controller.js"></script>
     </body>

@@ -5,7 +5,6 @@ app.factory('PhotosService',['$http','$q', function($http,$q) {
 
     serviceFactory.getAllAlbums = function() {
         var albumsPromise = $http.get(photosUrl).then(function(response) {
-            console.log(response);
             var albums = [];
             var currentAlbumId = 0;
             if (typeof response === 'object') {

@@ -1,0 +1,15 @@
+<img ng-src="{{photo.thumbnailUrl}}" class="thumbnail" ng-click="imageClicked()">
+<div ng-if="bigImageVisible" class="big-photo-container ">
+    <div class="photo-header">
+        <div style="float: left;">Photo nr {{photo.id}}</div>
+        <div style="width: 100%; text-align: right;">
+            <span ng-click="closeBigPhoto()">&times;</span>
+        </div>
+    </div>
+    <div class="big-photo-title">
+        {{photo.title}}
+    </div>
+    <div class="big-image-container">
+        <img ng-src="{{photo.url}}" />
+    </div>
+</div>
