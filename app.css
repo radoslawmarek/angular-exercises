@@ -162,10 +162,6 @@ img.thumbnail {
     }
 }
 
-
-
-
-
 @media screen and (max-height: 320px) {
     .big-image-container > img {
         max-height: 100px;

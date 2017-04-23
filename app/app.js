@@ -1,2 +1,2 @@
-var app = angular.module('angular-exercises', []);
+var app = angular.module('angular-exercises', ['ngSanitize']);
 

@@ -5,6 +5,7 @@ app.controller('MainPageController', ['$scope','PhotosService', function($scope,
     vm.selectedAlbum = -1;
     vm.albums = []; 
     vm.photos = [];
+    vm.number = 1234.567;
 
     vm.albumClick = function(albumId) {
         photosService.getAlbum(albumId).then(function(photos) {

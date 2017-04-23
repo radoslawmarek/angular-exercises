@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <script src="node_modules/lodash/lodash.min.js"></script>
         <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
         <link rel="stylesheet" type="text/css" href="app.css">
     </head>
     <body ng-app="angular-exercises">
@@ -34,10 +35,13 @@
 
             <div class="footer">
                 <span>Autor: Radosław Marek</span>
+                <span style="margin-left: 1em;">Strange filter: </span>
+                <span ng-bind-html="ctrl.number | strange: 2"></span>
             </div>
         </div>
 
         <script src="app/app.js"></script>
+        <script src="app/strange.filter.js"></script>
         <script src="app/photo.directive.js"></script>
         <script src="app/photos.service.js"></script>
         <script src="app/main-page.controller.js"></script>
