@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
     <head>
+        <script src="node_modules/lodash/lodash.min.js"></script>
         <script src="node_modules/angular/angular.js"></script>
         <link rel="stylesheet" type="text/css" href="app.css">
     </head>
@@ -11,7 +12,10 @@
                 {{ ctrl.title }}
             </div>
             <div class="content">
-                {{ctrl.message}}
+                <div ng-repeat="album in ctrl.albums" class="album" ng-click="ctrl.albumClick(album.albumId)">
+                    <img ng-src="{{album.albumThumbnailUrl}}"
+                    <span>{{album.albumTitle}}</span>
+                </div>
             </div>
             <div class="footer">
             </div>

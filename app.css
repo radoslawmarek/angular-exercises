@@ -42,3 +42,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2em;
 }
+
+.album {
+    width: 100%;
+    background-color: white;
+    background-image: linear-gradient(rgb(245, 245, 245) 0px, rgb(232, 232, 232) 100%);
+    margin: 4px;
+    padding: 4px;
+    border: 1px solid gray;
+}
+

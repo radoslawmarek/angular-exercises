@@ -1,9 +1,17 @@
 app.controller('MainPageController', ['$scope','PhotosService', function($scope, photosService) {
-    var self = this;
+    var vm = this;
 
-    self.title = 'Angular Exercises';
-    self.albums = []; 
-    // photosService.getAllAlbums().then(function(a) {
-    //     console.log(a);
-    // });
+    vm.title = 'AngularJS Exercises';
+    vm.albums = []; 
+
+    vm.albumClick = function(albumId) {
+        photosService.getAlbum(albumId).then(function(photos) {
+            console.log(photos);
+        });
+    }
+
+    photosService.getAllAlbums().then(function(albums) {
+        vm.albums = albums;
+    });
+
 }]);
