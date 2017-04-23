@@ -1,7 +1,11 @@
+* {
+    box-sizing: border-box;
+}
 html, body, .container {
     height: 100%;
     width: 100%;
     display: flex;
+    
 }
 body {
     margin: 0;
@@ -10,13 +14,12 @@ body {
 .container {
     justify-content: center;
     flex-flow: column;
-    /*flex-wrap: nowrap;*/
+    flex-wrap: nowrap;
     align-items: stretch;
 }
 
 .header {
     background-color: black;
-    width: 100%;
     color: white;
     font-size: 4em;
     font-family: Arial, Helvetica, sans-serif;
@@ -26,29 +29,47 @@ body {
     text-transform: uppercase;
 }
 
-.footer {
-    background-color: black;
-    width: 100%;
-    color: white;
-    font-size: 4em;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0.5em;
-    min-height: 1em;
-}
-
 .content {
     flex: 1;
-    overflow: auto;
+    overflow-y: auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2em;
 }
 
+.footer {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1em;
+    min-height: 1em;
+    font-size: 1.75em;
+}
+
+
+
 .album {
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    width: inherit;
     background-color: white;
     background-image: linear-gradient(rgb(245, 245, 245) 0px, rgb(232, 232, 232) 100%);
     margin: 4px;
     padding: 4px;
     border: 1px solid gray;
+}
+
+.album > img {
+    flex-grow: 0;
+    margin: 4px;
+    height: 150px;
+    width: 150px;
+    border: 1px solid gray;
+}
+
+.album-title {
+    flex-grow: 1;
+    margin: 4px 2px 4px 8px;
 }
 

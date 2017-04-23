@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <script src="node_modules/lodash/lodash.min.js"></script>
         <script src="node_modules/angular/angular.js"></script>
         <link rel="stylesheet" type="text/css" href="app.css">
@@ -11,13 +12,18 @@
             <div class="header">
                 {{ ctrl.title }}
             </div>
+
             <div class="content">
                 <div ng-repeat="album in ctrl.albums" class="album" ng-click="ctrl.albumClick(album.albumId)">
-                    <img ng-src="{{album.albumThumbnailUrl}}"
-                    <span>{{album.albumTitle}}</span>
+                    <img ng-src="{{album.albumThumbnailUrl}}" />
+                    <div class="album-title">
+                        {{album.albumTitle}}
+                    </div>
                 </div>
             </div>
+
             <div class="footer">
+                <span>Autor: Radosław Marek</span>
             </div>
         </div>
 
